@@ -7,10 +7,10 @@ const getThemeFromCookie = (cookie: string) => {
 	return isTheme(theme) ? theme : null
 }
 
-export const handle: Handle = async ({request, resolve}) => {
-	const cookie = request.headers.cookie
-	request.locals.theme = getThemeFromCookie(cookie)
-	return resolve(request)
+export const handle: Handle = async ({event, resolve}) => {
+	const cookie = event.request.headers.cookie
+	event.locals.theme = getThemeFromCookie(cookie)
+	return resolve(event)
 }
 
 export const getSession: GetSession = ({locals}) => {
