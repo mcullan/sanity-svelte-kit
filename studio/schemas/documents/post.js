@@ -36,16 +36,6 @@ export default {
       title: 'Main image'
     },
     {
-      name: 'authors',
-      title: 'Authors',
-      type: 'array',
-      of: [
-        {
-          type: 'authorReference'
-        }
-      ]
-    },
-    {
       name: 'categories',
       type: 'array',
       title: 'Categories',

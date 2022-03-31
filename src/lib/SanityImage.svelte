@@ -2,7 +2,7 @@
   import {urlFor} from './sanityClient'
 
   export let image
-  export let maxWidth = 1200
+  export let maxWidth = 300
   export let alt = undefined
 
   // Example image document ID: image-cc93b69600f5cd1abce97fd0d4aa71793dbbba76-1350x900-png
@@ -21,10 +21,10 @@
 
 {#if image}
   <img
+    class="mx-auto object-fill"
     loading="lazy"
     src={urlFor(image).width(maxWidth).fit('fillmax')}
     alt={alt || image.alt || ''}
-    style="aspect-ratio: {aspectRatio}; opacity: {loaded ? 1 : 0}; transition: .2s opacity;"
     on:load={() => (loaded = true)}
   />
 {/if}

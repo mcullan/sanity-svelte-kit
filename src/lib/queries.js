@@ -15,13 +15,3 @@ export function getPostsQuery(extraFilter) {
     publishedAt,
   }`
 }
-
-/**
- * You can also re-use parts of projections as fragments.
- * In this case, we're defining that, to render an author card, we need their name, slug & image.
- */
-export const AUTHOR_CARD_FRAGMENT = `
-name,
-slug,
-image,
-`
