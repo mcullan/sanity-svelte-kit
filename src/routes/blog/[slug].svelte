@@ -1,10 +1,11 @@
 <script context="module">
+  import { marked } from 'marked';
   export async function load({page, fetch}) {
     try {
       const url = `/blog/${page.params.slug}.json`
       const res = await fetch(url)
       const data = await res.json()
-
+      console.log(data)
       if (data?.post) {
         return {
           props: data
@@ -27,8 +28,11 @@
   import AuthorBlock from '$lib/AuthorBlock.svelte'
   import AuthorCard from '$lib/AuthorCard.svelte'
   import SanityImage from '$lib/SanityImage.svelte'
-
+  import MarkdownPost from '$lib/MarkdownPost.svelte'
+  import Circle from '../../lib/Circle.svelte';
   export let post
+  
+
 </script>
 
 <svelte:head>
@@ -54,6 +58,11 @@
   <SanityImage image={post.image} />
 {/if}
 
+  <!-- {marked.parse(post.body[0].children[0].text)} -->
+
+<MarkdownPost markdown={post.markdown} ></MarkdownPost>
+
+  <!-- 
 <PortableText
   blocks={post.body}
   serializers={{
@@ -66,4 +75,4 @@
       link: Link
     }
   }}
-/>
+/> -->
