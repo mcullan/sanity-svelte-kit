@@ -4,7 +4,6 @@
 
 <script>
   export let blogTitle = 'My Blog'
-
   let path
   $: ({path} = $page)
 </script>

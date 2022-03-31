@@ -1,8 +1,9 @@
 <script context="module">
   import { marked } from 'marked';
-  export async function load({page, fetch}) {
+  export async function load({params, fetch}) {
     try {
-      const url = `/blog/${page.params.slug}.json`
+      const url = `/blog/${params.slug}.json`
+      console.log(params)
       const res = await fetch(url)
       const data = await res.json()
       console.log(data)
@@ -12,6 +13,7 @@
         }
       }
     } catch (err) {
+
       return {
         status: 500,
         error: new Error(`Could not load url`)

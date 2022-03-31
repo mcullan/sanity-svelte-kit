@@ -1,10 +1,14 @@
 import {client} from '$lib/sanityClient'
+import { AUTHOR_CARD_FRAGMENT } from '$lib/queries'
 
 // Gets a specific blog post from its slug.current value
 export async function get({params: {slug}}) {
   const post = await client.fetch(/* groq */ `*[_type == "post" && slug.current == "${slug}"][0]{
     ...,
-	  body[] {
+		"authors": authors[].author->{
+			${AUTHOR_CARD_FRAGMENT}
+		},
+    body[] {
       ...,
 			children[] {
 				...,
@@ -12,6 +16,7 @@ export async function get({params: {slug}}) {
 				// Let's expand the reference to the author document & get its name, slug & image
 				_type == "authorReference" => {
 					author->{
+						${AUTHOR_CARD_FRAGMENT}
 					}
 				}
 			}
@@ -27,6 +32,7 @@ export async function get({params: {slug}}) {
     }
   }
 
+  console.log()
   return {
     status: 500,
     body: new Error('Internal Server Error')
