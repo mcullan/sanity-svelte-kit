@@ -1,6 +1,5 @@
 <script context="module">
 	import { showNavModal } from '$lib/stores/navModal';
-
 	export async function load({ fetch }) {
 		try {
 			const res = await fetch('/blog/all.json');

@@ -1,8 +1,6 @@
 <script>
   import '../styles/tailwind.css';
   import '../styles/global.css';
-  // import '../styles/prism.css'
-	// import '../styles/dracula.css';
 
 	import collage from '$lib/assets/collagecrop.jpg?webp&meta&width=1960px';
   import Header from '$lib/components/Header.svelte';

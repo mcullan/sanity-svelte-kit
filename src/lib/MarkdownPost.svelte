@@ -1,13 +1,22 @@
 <script>
-	import '../styles/prism.css';
+	import '../styles/dracula.css';
 	import Prism from 'prismjs';
-	let language = 'javascript';
 	import { marked } from 'marked';
+	import { browser } from '$app/env';
+	
+	const highlight = (err, result) => {
+		if (browser) {
+			const codeBlocks = document.querySelectorAll('.code');
+			Prism.highlight(codeBlocks);
+		}
+		return result;
+	};
+	
 	export let markdown;
-	// const parsedMarkdown = Prism.highlight(marked.parse(markdown), Prism.languages[language]);
-	const parsedMarkdown = marked.parse(markdown);
+	const parsedMarkdown = marked.parse(markdown, highlight);
 </script>
 
 <div>
+	<!-- {@html parsedMarkdown} -->
 	{@html parsedMarkdown}
 </div>
