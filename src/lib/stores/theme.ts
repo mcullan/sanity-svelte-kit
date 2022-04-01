@@ -23,9 +23,9 @@ export const setTheme = (theme: Theme) => {
 	session.update(($session) => ({ ...$session, theme }))
 	fetch('/theme', { method: 'PUT', body: theme })
 
-	if (theme === 'dark') {
-		window.document.documentElement.classList.add('dark')
-	} else if (theme === 'light') {
-		window.document.documentElement.classList.remove('dark')
-	}
+	// if (theme === 'dark') {
+	// 	window.document.documentElement.classList.add('dark')
+	// } else if (theme === 'light') {
+	// 	window.document.documentElement.classList.remove('dark')
+	// }
 }

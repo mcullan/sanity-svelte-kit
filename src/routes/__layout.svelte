@@ -1,16 +1,14 @@
 <script>
   import '../styles/tailwind.css';
-	import '../styles/dracula.css';
   import '../styles/global.css';
+  // import '../styles/prism.css'
+	// import '../styles/dracula.css';
+
 	import collage from '$lib/assets/collagecrop.jpg?webp&meta&width=1960px';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
-	import { theme } from '$lib/stores/theme';
 	import NavModal from '$lib/components/nav/NavModal.svelte';
-	import { showNavModal } from '$lib/stores/navModal';
 </script>
-
-<header blogtitle={'Michael Cullan'}></header>
 
 
 <div class="sticky top-0 z-50 dark:bg-p3-7  bg-p3-1 transition-colors duration-500">
@@ -24,7 +22,7 @@
 			max-h-[160px]
             dark:invert invert-0 saturate-100 dark:saturate-100 
             hue-rotate-0 dark:hue-rotate-180 duration-500 transition visible w-full 
-			 m-auto object-cover
+			      m-auto object-cover
             "
 			alt="A collage"
 			src={collage.src}
@@ -37,7 +35,3 @@
 <footer>
   <Footer></Footer>
 </footer>
-
-<style>
-  
-</style>

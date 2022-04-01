@@ -1,12 +1,9 @@
 <script context="module">
-  import { marked } from 'marked';
   export async function load({params, fetch}) {
     try {
       const url = `/blog/${params.slug}.json`
-      console.log(params)
       const res = await fetch(url)
       const data = await res.json()
-      console.log(data)
       if (data?.post) {
         return {
           props: data

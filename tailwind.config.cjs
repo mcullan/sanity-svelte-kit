@@ -37,5 +37,8 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [],
+  safelist: [
+    'language-js'
+  ]
 }
