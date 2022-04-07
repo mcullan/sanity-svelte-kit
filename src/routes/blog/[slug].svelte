@@ -23,6 +23,7 @@
   import SanityImage from '$lib/components/SanityImage.svelte'
   import MarkdownPost from '$lib/components/MarkdownPost.svelte'
   export let post
+  const imgClasses = "mx-auto object-cover w-[2000px] h-[48px] "
 </script>
 
 <svelte:head>
@@ -41,7 +42,9 @@
 <hr />
 
 {#if post.image}
-  <SanityImage image={post.image} />
+<div class='-mx-4'>
+  <SanityImage classes={imgClasses} maxWidth={1000} image={post.image} />
+</div>
 {/if}
 
 <MarkdownPost markdown={post.markdown} ></MarkdownPost>

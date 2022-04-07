@@ -4,6 +4,7 @@
   export let image
   export let maxWidth = 300
   export let alt = undefined
+  export let classes = ''
 
   // Example image document ID: image-cc93b69600f5cd1abce97fd0d4aa71793dbbba76-1350x900-png
   // Structure: image-${storedImgId}-${dimensions}-${format}
@@ -21,7 +22,7 @@
 
 {#if image}
   <img
-    class="mx-auto object-cover w-[120%] h-[80px]"
+    class="{classes}"
     loading="lazy"
     src={urlFor(image).width(maxWidth).fit('fillmax')}
     alt={alt || image.alt || ''}

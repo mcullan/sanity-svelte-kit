@@ -4,6 +4,8 @@
 	export let invertClasses =
 		'dark:invert invert-0 brightness-100 dark:brightness-[.6] contrast-100 dark:contrast-[3] hue-rotate-0 dark:hue-rotate-180';
 	const _invertClasses = post.imgDark ? invertClasses : '';
+
+	const imgClasses = 'mx-auto object-cover w-[120%] h-[80px]'
 </script>
 
 <article>
@@ -32,7 +34,7 @@
     object-cover
     "
 			>
-				<SanityImage image={post.image} maxWidth={600} />
+				<SanityImage classes={imgClasses} image={post.image} maxWidth={600} />
 			</div>
 		{/if}
 		<div class="my-auto">
