@@ -22,7 +22,6 @@ export async function get({params: {slug}}) {
 			}
     }
   }`)
-
   if (post) {
     return {
       status: 200,
@@ -33,7 +32,9 @@ export async function get({params: {slug}}) {
   }
 
   console.log()
+  console.log('500')
   return {
+    
     status: 500,
     body: new Error('Internal Server Error')
   }

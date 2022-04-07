@@ -15,6 +15,7 @@
 	<div class="pb-[3rem]">
 		<HeaderImage />
 		<main class="mx-2 md:mx-4">
+
 			<slot />
 		</main>
 

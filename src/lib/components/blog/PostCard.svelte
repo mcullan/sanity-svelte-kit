@@ -4,7 +4,6 @@
 	export let invertClasses =
 		'dark:invert invert-0 brightness-100 dark:brightness-[.6] contrast-100 dark:contrast-[3] hue-rotate-0 dark:hue-rotate-180';
 	const _invertClasses = post.imgDark ? invertClasses : '';
-
 	const imgClasses = 'mx-auto object-cover w-[120%] h-[80px]'
 </script>
 
@@ -39,7 +38,7 @@
 		{/if}
 		<div class="my-auto">
 			<h2 class="px-2  my-auto font-mono text-sm py-1 text-p3-6 dark:text-p3-1 duration-500 transition-colors">
-				<a rel="prefetch" href="/blog/{post.slug.current}">{post.title}</a>
+				<a  sveltekit:prefetch href="/blog/{post.slug.current}">{post.title}</a>
 			</h2>
 		</div>
 	</div>

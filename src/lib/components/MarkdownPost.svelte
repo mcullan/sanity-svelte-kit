@@ -13,9 +13,11 @@
 	};
 	
 	export let markdown;
-	const parsedMarkdown = marked.parse(markdown, highlight);
+	// const parsedMarkdown = marked.parse(markdown, highlight);
+	const parsedMarkdown = marked.parse(markdown);
 </script>
 
 <div class="py-[28px] mx-auto px-2 leading-loose prose prose-sm break-words " style='hyphens: auto;'>
 	{@html parsedMarkdown}
+	<!-- hello -->
 </div>
