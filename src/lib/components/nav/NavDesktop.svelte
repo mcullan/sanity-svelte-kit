@@ -1,4 +1,6 @@
 <script>
+	import DarkModeButton from "$lib/components/nav/DarkModeButton.svelte";
+
 	export let classes = '';
 	export let buttons = [
 		{ content: 'Home', href: '/' },
@@ -10,7 +12,7 @@
 </script>
 
 
-<div class="{classes} flex-grow my-auto max-w-[500px] pl-16 ">
+<div class="flex {classes} flex-grow my-auto max-w-[500px] pl-16 justify-self-end ">
 	<ul class="flex flex-cols justify-between w-full text-md md:visible">
 		{#each buttons as { content, href, target }}
 			<li>
@@ -22,4 +24,10 @@
 			</li>
 		{/each}
 	</ul>
+
+<div class="{classes}  justify-self-end my-auto">
+	<DarkModeButton></DarkModeButton>
 </div>
+</div>
+
+

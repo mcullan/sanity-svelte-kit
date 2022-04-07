@@ -5,8 +5,8 @@
 	export let showNavDesktop = false;
 </script>
 
-<div class="sticky top-0 flex justify-between h-10 gap-2 px-2 w-full">
-	<div class="py-1 self-start">
+<div class="sticky justify-between top-0 flex h-10 gap-2 px-2 w-full ">
+	<div class="py-1 justify-self-end ">
 		<a class="" href="/index">
 			<Name />
 		</a>
