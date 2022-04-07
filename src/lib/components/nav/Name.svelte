@@ -25,6 +25,8 @@
 
 <input class="hidden" type="checkbox" name="btnControl" id="btnControl" />
 <label for="btnControl" class="group cursor-pointer">
-    <h1 class={_class}>{name}</h1>
+    <a href="/">
+        <h1 class={_class}>{name}</h1>
+    </a>
 </label>
     

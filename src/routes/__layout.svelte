@@ -5,7 +5,6 @@
 	import HeaderImage from '$lib/components/HeaderImage.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import NavMobile from '$lib/components/nav/NavMobile.svelte';
-
 	export let wrapperWidth;
 </script>
 
