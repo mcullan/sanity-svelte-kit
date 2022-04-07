@@ -10,7 +10,7 @@
   <AboutSection></AboutSection>
   <Contact></Contact>
 </div>
-  
-<h2>Blog</h2>
+
+<h2 class=" text-p3-5 hover:text-p3-3 dark:text-p3-2 dark:hover:text-p3-4">Blog</h2>
   <PostsGrid {posts} />
   

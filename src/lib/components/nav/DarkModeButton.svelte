@@ -1,10 +1,20 @@
 <script>
-	let active = true;
+    import {theme, Theme, setTheme} from '$lib/stores/theme'
+    const handleClick = (() => {
+        const nextTheme = $theme === Theme.Dark ? Theme.Light : Theme.Dark;
+        setTheme(nextTheme)
+    })
+
+    let active = 'dark'
+    $: active = $theme === 'dark' ? 'active' : ''
+
 </script>
 
-<div on:click={() => (active = !active)} class="btn-container {active === true ? 'active' : ''} ">
+
+<div on:click={handleClick} class="btn-container cursor-pointer {active} ">
 	<i class="fas active0" />
 </div>
+
 
 <style>
 	.btn-container,

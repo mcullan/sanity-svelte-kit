@@ -1,28 +1,43 @@
+/* Injects Tailwind's base styles & any base styles registered by plugins. */
+@tailwind base;
 
+@layer base {
+	/* custom CSS goes here */
+	html {
+		height: 100%;
+		-webkit-font-smoothing: antialiased;
+	}
 
- 
-   /* Injects Tailwind's base styles & any base styles registered by plugins. */
-   @tailwind base;
+	html,
+	body,
+	#theme-container,
+	#app-content {
+		display: flex;
+		flex-direction: column;
+	}
 
-   @layer base { /* custom CSS goes here */ 
+	body,
+	#theme-container,
+	#app-content {
+		flex-grow: 1;
+	}
 
-      
-   }
+}
 
-   /* Injects Tailwind's component classes & any component classes registered by plugins. */
-   @tailwind components;
+/* Injects Tailwind's component classes & any component classes registered by plugins. */
+@tailwind components;
 
-   @layer components { /* custom CSS goes here */ 
-    
-   }
+@layer components {
+	/* custom CSS goes here */
+}
 
-   /* Injects Tailwind's utility classes & any utility classes registered by plugins. */
-   @tailwind utilities;
+/* Injects Tailwind's utility classes & any utility classes registered by plugins. */
+@tailwind utilities;
 
-   @layer utilities { /* custom CSS goes here */ }
+@layer utilities {
+	/* custom CSS goes here */
+}
 
-   /* Directive controlling where Tailwind injects responsive variations of utilities.
+/* Directive controlling where Tailwind injects responsive variations of utilities.
       By default Tailwind normally append these at the end of your stylesheet. */
-   @tailwind screens;
-
-   
+@tailwind screens;
