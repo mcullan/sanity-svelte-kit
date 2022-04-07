@@ -20,8 +20,8 @@
 </script>
 
 <script>
-  import SanityImage from '$lib/SanityImage.svelte'
-  import MarkdownPost from '$lib/MarkdownPost.svelte'
+  import SanityImage from '$lib/components/SanityImage.svelte'
+  import MarkdownPost from '$lib/components/MarkdownPost.svelte'
   export let post
 </script>
 

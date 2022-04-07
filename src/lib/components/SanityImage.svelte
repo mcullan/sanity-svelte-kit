@@ -1,5 +1,5 @@
 <script>
-  import {urlFor} from './sanityClient'
+  import {urlFor} from '$lib/utilities/sanityClient'
 
   export let image
   export let maxWidth = 300
@@ -21,7 +21,7 @@
 
 {#if image}
   <img
-    class="mx-auto object-fill"
+    class="mx-auto object-cover w-[120%] h-[80px]"
     loading="lazy"
     src={urlFor(image).width(maxWidth).fit('fillmax')}
     alt={alt || image.alt || ''}

@@ -1,5 +1,5 @@
 <script>
-	import '../styles/dracula.css';
+	import '$lib/../styles/dracula.css';
 	import Prism from 'prismjs';
 	import { marked } from 'marked';
 	import { browser } from '$app/env';
@@ -16,7 +16,6 @@
 	const parsedMarkdown = marked.parse(markdown, highlight);
 </script>
 
-<div>
-	<!-- {@html parsedMarkdown} -->
+<div class="mx-auto px-2 leading-loose prose prose-sm break-words " style='hyphens: auto;'>
 	{@html parsedMarkdown}
 </div>

@@ -1,5 +1,5 @@
-import {client} from '$lib/sanityClient'
-import { AUTHOR_CARD_FRAGMENT } from '$lib/queries'
+import {client} from '$lib/utilities/sanityClient'
+import { AUTHOR_CARD_FRAGMENT } from '$lib/utilities/queries'
 
 // Gets a specific blog post from its slug.current value
 export async function get({params: {slug}}) {

@@ -1,5 +1,5 @@
-import { getPostsQuery } from '$lib/queries'
-import {client} from '$lib/sanityClient'
+import { getPostsQuery } from '$lib/utilities/queries'
+import {client} from '$lib/utilities/sanityClient'
 
 // Fetch all valid posts & authors to display in the homepage
 export async function get() {

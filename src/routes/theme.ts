@@ -1,5 +1,5 @@
 import type {RequestHandler} from '@sveltejs/kit'
-import {isTheme, type Theme} from '../types'
+import {isTheme, type Theme} from '$lib/../types'
 
 // PUT /theme
 /** @type {import('./[id]').RequestHandler} */

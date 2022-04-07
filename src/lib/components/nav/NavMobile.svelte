@@ -1,36 +1,22 @@
 <script>
-	import { onMount } from 'svelte';
-	import BurgerButton from '$lib/components/nav/BurgerButton.svelte';
-    import { showNavModal, showDarkModeButton } from "$lib/stores/navModal";
-
-	// this could be a store
-	let showBurger = false;
-    export let classes = "";
-	const handleMobileIconClick = () => {
-        showNavModal.update(value => !value)
-	};
-
-	const mediaQueryHandler = (e) => {
-		if (!e.matches) {
-			showBurger = false;
-			showDarkModeButton.set(true);
-		} else {
-			showBurger = true;
-			showDarkModeButton.set(false);
-		}
-	};
-
-	onMount(() => {
-		if (window.innerWidth < 767) {
-			showBurger = true;
-		}
-
-		const mediaListener = window.matchMedia('(max-width: 767px)');
-		mediaListener.addEventListener('change', mediaQueryHandler);
-	});
-
+	export let showNavMobile = true;
+	export let buttons = [
+		// { content: 'About', href: '/' },
+		{ content: 'Blog', href: '/' },
+		{ content: 'Resume', href: '/resume.pdf' },
+		// { content: 'Resume', href: '/resume.pdf' },
+		{ content: 'Contact', href: '/contact' }
+	];
 </script>
 
-{#if showBurger}
-	<BurgerButton  classes="h-7 w-7 {classes}" onClick={handleMobileIconClick} />
+{#if showNavMobile}
+	<div class="h-[60px] grid grid-cols-3 grid-rows-1 justify-around gap-2 text-md divide-x border-red-500">
+		{#each buttons as { content, href }}
+			<div class="border-gray-500 self-center text-center h">
+				<a {href} class="hover:underline cursor-pointer pt-4">
+					{content}
+				</a>
+			</div>
+		{/each}
+	</div>
 {/if}

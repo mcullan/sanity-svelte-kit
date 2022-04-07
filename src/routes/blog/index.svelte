@@ -13,8 +13,11 @@
 </script>
 
 <script>
-	import Home from '$lib/pages/Home.svelte';
+    import PostsGrid from '$lib/components/blog/PostsGrid.svelte';
 	export let posts;
+    
 </script>
-
-<Home {posts} />
+  
+<h2 class='pt-2'>Blog</h2>
+  <PostsGrid {posts} />
+  

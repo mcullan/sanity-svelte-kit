@@ -1,21 +1,36 @@
 {
-    "css.validate": false,
-    "less.validate": false,
-    "scss.validate": false,
-    "postcss.validate": false,
-    "files.associations": {
-      "*.css": "postcss"
-    },
-    "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.html": true
-    },
-    "stylelint.enable": true,
-    "stylelint.validate": [
-      "css",
-      "postcss"
-    ],
-    "typescript.disableAutomaticTypeAcquisition": true,
-    "javascript.format.enable": false
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "postcss.validate": false,
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.html": true
+  },
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "postcss"
+  ],
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "javascript.format.enable": false,
+  "files.exclude": {
+    ".netlify": true,
+    ".svelte-kit": true,
+    ".sanity-template": true,
+    ".vscode": true,
+    "build": true,
+    "node_modules": true,
+    ".eslintrc.cjs": true,
+    ".gitignore": true,
+    "package-lock.json": true,
+    "renovate.json": true,
+    "stylelintrc.json": true,
+    "README.md": true,
+    ".prettierrc": true
   }
+}

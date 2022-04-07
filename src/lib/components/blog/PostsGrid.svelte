@@ -1,5 +1,5 @@
 <script>
-  import PostCard from '$lib/PostCard.svelte'
+  import PostCard from '$lib/components/blog/PostCard.svelte'
   export let posts = []
 </script>
 

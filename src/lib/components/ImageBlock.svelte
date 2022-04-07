@@ -1,5 +1,5 @@
 <script>
-  import SanityImage from './SanityImage.svelte'
+  import SanityImage from '$lib/components/SanityImage.svelte'
 
   export let portableText
   $: ({block} = portableText)
